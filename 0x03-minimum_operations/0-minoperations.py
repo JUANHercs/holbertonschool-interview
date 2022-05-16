@@ -9,9 +9,9 @@ def minOperations(n):
     if type(n) is not int or n <= 0:
         return 0
 
-        count = 0
-        letter = 1
-        copy = 1
+    count = 0
+    letter = 1
+    copy = 1
 
     while letter < n:
         if n % letter == 0:
