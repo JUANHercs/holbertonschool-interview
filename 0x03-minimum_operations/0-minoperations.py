@@ -16,7 +16,7 @@ def minOperations(n):
     while letter < n:
         if n % letter == 0:
             copy = letter
-        count += 1
+            count += 1
         if letter != n:
             letter += copy
             count += 1
