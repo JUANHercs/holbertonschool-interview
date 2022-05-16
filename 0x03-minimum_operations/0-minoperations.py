@@ -5,8 +5,10 @@ only ywo operations Copy All (*) and PAste (+)"""
 
 def minOperations(n):
     count = 0
-    if n < 1:
+    if type(n) is not int or n <= 0:
         return(0)
+    if n % 2 != 0:
+        count = 1
     while n != 0:
         if n % 2:
             n = n // 2
