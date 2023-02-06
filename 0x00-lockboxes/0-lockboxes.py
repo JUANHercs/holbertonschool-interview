@@ -21,7 +21,7 @@ Return True if all boxes can be opened, else return False"""
 #boxes = [[1], [2], [3], [4], []]
 #print(canUnlockAll(boxes))
 
-
+"""
 boxes = [[1], [2], [3], [4], []]
 boxes2 = [[1, 4, 6], [2], [0, 4, 1], [5, 6, 2], [3], [4, 1], [6]]
 for elements in boxes:
@@ -34,3 +34,17 @@ print(boxes2[2][1])
 print(boxes[3][0])
 print(len(boxes[0]))
 print(len(boxes2[0]))
+"""
+def canUnlockAll(boxes):
+    array = []
+    n = 0
+    for b in boxes:
+        for elements in b:
+            array.append(elements)
+    array.sort()
+    for A in array:
+        if array[n] <= array[n+1]:
+            continue
+        else:
+            return False
+    return True
